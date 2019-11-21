@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 
 public class GameField extends JPanel implements ActionListener {
     private final int SIZE = 1000;
-    private int TIME = 150;
+    private int TIME = 250;
 
     public static int getAppleSize() {
         return APPLE_SIZE;
@@ -50,7 +50,7 @@ public class GameField extends JPanel implements ActionListener {
         setBackground(Color.black);
 
         loadImages();
-        myBot.loadImages("ghost.png");
+        myBot.loadImages("src\\images\\ghost.png");
         myBot.setMyPacX(APPLE_SIZE);
         myBot.setMyPacY(APPLE_SIZE * 5);
         initGame();
@@ -63,23 +63,22 @@ public class GameField extends JPanel implements ActionListener {
         timer = new Timer(TIME, this);
         timer.start();
         createApple();
-
     }
 
     public void createApple() {
     }
 
     public void loadImages() {
-        ImageIcon iia = new ImageIcon("apple.jpg");
+        ImageIcon iia = new ImageIcon("src\\images\\apple.jpg");
         apple = iia.getImage();
 
-        ImageIcon iis = new ImageIcon("star.png");
+        ImageIcon iis = new ImageIcon("src\\images\\star.png");
         star = iis.getImage();
 
-        ImageIcon iina = new ImageIcon("pixel.jpg");
+        ImageIcon iina = new ImageIcon("src\\images\\pixel.jpg");
         notApple = iina.getImage();
 
-        ImageIcon iip = new ImageIcon("Kisha.png");
+        ImageIcon iip = new ImageIcon("src\\images\\Kisha.png");
         pacman = iip.getImage();
     }
 
@@ -238,14 +237,17 @@ public class GameField extends JPanel implements ActionListener {
 class BotFather {
 
     private int APPLE_SIZE = GameField.getAppleSize();
+
     public Image getBotImg() {
         return botImg;
     }
+
     private Image botImg;
 
     public void setMyPacX(int myPacX) {
         this.myPacX = myPacX;
     }
+
     public void setMyPacY(int myPacY) {
         this.myPacY = myPacY;
     }
