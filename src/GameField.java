@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 
 public class GameField extends JPanel implements ActionListener {
     private final int SIZE = 1000;
-    private int TIME = 250;
+    private int TIME = 250;    ///set time
 
     public static int getAppleSize() {
         return APPLE_SIZE;
