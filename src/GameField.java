@@ -14,7 +14,7 @@ public class GameField extends JPanel implements ActionListener {
         return APPLE_SIZE;
     }
 
-    public static int APPLE_SIZE = 30;
+    public static int APPLE_SIZE = 30; //Set size
     BotFather myBot = new BotFather();
     private Image pacman;
     private Image apple;
